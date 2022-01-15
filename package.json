@@ -4,17 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "per-env",
+    "start:development": "nodemon -r dotenv/config ./bin/www",
+    "start:production": "node ./bin/www"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.2",
-    "pug": "^2.0.4"
+    "morgan": "^1.10.0",
+    "per-env": "^1.0.2",
+    "pg": "^8.7.1",
+    "pug": "^2.0.4",
+    "sequelize": "^5.22.5"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "dotenv-cli": "^4.1.1",
+    "nodemon": "^2.0.15",
+    "sequelize-cli": "^5.5.1"
   }
 }
